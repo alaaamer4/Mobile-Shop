@@ -6,7 +6,7 @@ import Info from "../components/golbals/Info"
 
 const data = graphql`
   {
-    file(relativePath: { eq: "background.jpg" }) {
+    file(relativePath: { eq: "aboutBcg.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -15,15 +15,18 @@ const data = graphql`
     }
   }
 `
-export default function Home() {
+
+const AboutPage = () => {
   const result = useStaticQuery(data)
   return (
     <Layout>
       <BackgroundSection
         src={result.file.childImageSharp.fluid}
-        Title="best mobile support in the east"
+        Title="A little bit about us"
       />
-      <Info title={"our story"} btn={"about page"} Path={"/about"} />
+      <Info title={"who are we"} btn={"Home Page"} Path={"/"} />
     </Layout>
   )
 }
+
+export default AboutPage

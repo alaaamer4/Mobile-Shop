@@ -1,0 +1,28 @@
+.default-background {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999999999999999999;
+}
+.wrapper {
+  width: 70vw;
+  margin: auto;
+}
+
+.btn-blue {
+  color: #5fa1e8;
+  border: 2px solid #5fa1e8;
+}
+.btn-blue:hover {
+  background-color: #5fa1e8;
+  color: #fff;
+}

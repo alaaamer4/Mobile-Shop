@@ -25,7 +25,10 @@ const Navbar = () => {
     }
   }
   return (
-    <nav className="navbar  navbar-expand-sm navbar-light bg-white p-4 ">
+    <nav
+      className="navbar  navbar-expand-sm navbar-light bg-white p-4 "
+      style={{ borderBottom: "#5FB7EA solid 2px" }}
+    >
       <div className="container">
         <Link to="/">
           <img src={logo} />
@@ -50,9 +53,11 @@ const Navbar = () => {
               )
             })}
             <li className="nav-item mx-2 ">
-              <h3>
-                <GiShoppingCart />{" "}
-              </h3>
+              <Link to="/">
+                <h3>
+                  <GiShoppingCart />{" "}
+                </h3>
+              </Link>
             </li>
           </ul>
         </div>
