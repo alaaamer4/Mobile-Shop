@@ -2,11 +2,23 @@
   min-height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  /* justify-content: center; */
   background-position: center;
   background-size: cover;
   z-index: 0;
+}
+.about-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+.main-text {
+  color: #fff;
+  width: 50%;
 }
 .navbar {
   position: sticky;

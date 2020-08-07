@@ -23,6 +23,7 @@ const AboutPage = () => {
       <BackgroundSection
         src={result.file.childImageSharp.fluid}
         Title="A little bit about us"
+        styleClass="about-page"
       />
       <Info title={"who are we"} btn={"Home Page"} Path={"/"} />
     </Layout>
