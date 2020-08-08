@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { GiShoppingCart } from "react-icons/gi"
+import { FiLogIn, FiUserPlus } from "react-icons/fi"
 import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
 const Navbar = () => {
@@ -14,6 +15,10 @@ const Navbar = () => {
       name: "about",
       path: "/about",
     },
+    {
+      name: "products",
+      path: "/products",
+    },
   ])
   const openNav = () => {
     if (isOpen) {
@@ -26,7 +31,7 @@ const Navbar = () => {
   }
   return (
     <nav
-      className="navbar  navbar-expand-sm navbar-light bg-white p-4 "
+      className="navbar  navbar-expand-md navbar-light bg-white p-4 "
       style={{ borderBottom: "#5FB7EA solid 2px" }}
     >
       <div className="container">
@@ -57,6 +62,16 @@ const Navbar = () => {
                 <h3>
                   <GiShoppingCart />{" "}
                 </h3>
+              </Link>
+            </li>
+            <li className=" mx-2 nav-item text-capitalize ">
+              <Link to="/app/login" className="nav-link">
+                <FiLogIn />
+              </Link>
+            </li>
+            <li className=" mx-2 nav-item text-capitalize ">
+              <Link to="/app/register" className="nav-link">
+                <FiUserPlus />
               </Link>
             </li>
           </ul>

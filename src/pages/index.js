@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import BackgroundSection from "../components/golbals/BackgroundSection"
 import Info from "../components/golbals/Info"
-
+import Features from "../components/home/Features"
 const data = graphql`
-  {
+  query background {
     file(relativePath: { eq: "background.jpg" }) {
       childImageSharp {
         fluid {
@@ -13,10 +13,26 @@ const data = graphql`
         }
       }
     }
+    items: allStrapiPhones {
+      nodes {
+        price
+        title
+        description
+        id
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
   }
 `
 export default function Home() {
   const result = useStaticQuery(data)
+
   return (
     <Layout>
       <BackgroundSection
@@ -24,6 +40,7 @@ export default function Home() {
         Title="best mobile support in the east"
       />
       <Info title={"our story"} btn={"about page"} Path={"/about"} />
+      <Features data={result.items.nodes} />
     </Layout>
   )
 }
