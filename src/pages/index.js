@@ -13,19 +13,22 @@ const data = graphql`
         }
       }
     }
-    items: allStrapiPhones {
+    items: allStrapiPhones(
+      limit: 4
+      sort: { fields: created_at, order: DESC }
+    ) {
       nodes {
-        price
-        title
-        description
         id
         image {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid_withWebp
+              src
             }
           }
         }
+        title
+        price
+        description
       }
     }
   }
@@ -40,7 +43,7 @@ export default function Home() {
         Title="best mobile support in the east"
       />
       <Info title={"our story"} btn={"about page"} Path={"/about"} />
-      <Features data={result.items.nodes} />
+      <Features data={result.items.nodes} title={"features"} />
     </Layout>
   )
 }

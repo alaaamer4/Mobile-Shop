@@ -58,7 +58,7 @@ const Navbar = () => {
               )
             })}
             <li className="nav-item mx-2 ">
-              <Link to="/">
+              <Link to="/app/cart">
                 <h3>
                   <GiShoppingCart />{" "}
                 </h3>

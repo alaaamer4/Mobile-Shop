@@ -5,7 +5,7 @@ body {
   min-height: 85vh;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  color: #fff;
   background-position: center;
   background-size: cover;
   z-index: 0;
@@ -14,13 +14,12 @@ body {
   min-height: 60vh;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  color: rgb(85, 80, 80);
   background-position: center;
   background-size: cover;
   z-index: 0;
 }
 .main-text {
-  color: #fff;
   width: 50%;
 }
 .navbar {
@@ -37,8 +36,16 @@ body {
   color: #5fa1e8;
   border: 2px solid #5fa1e8;
 }
+.btn-darken {
+  color: #202020;
+  border: 2px solid #535455cb;
+}
 .btn-blue:hover {
   background-color: #5fa1e8;
+  color: #fff;
+}
+.btn-darken:hover {
+  background-color: #05050556;
   color: #fff;
 }
 
@@ -71,6 +78,29 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.single-product {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.product-image {
+  margin: auto 1rem;
+}
+
+.cart-page {
+  min-height: 76vh;
+  color: #222;
+  width: 100vw;
+  background: linear-gradient(
+      rgba(219, 216, 216, 0.808),
+      rgba(255, 251, 251, 0.788)
+    ),
+    url("../images/undraw_shopping_app_flsj.svg") no-repeat center
+      center/contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 998px) {
   .form-grid {
     display: block;
@@ -79,9 +109,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .single-product {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   .items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .single-product {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -99,6 +137,10 @@ body {
   cursor: pointer;
   position: relative;
   border-radius: 1rem;
+}
+.card-img-top {
+  min-height: 220px;
+  object-fit: cover;
 }
 .buttons {
   position: absolute;
